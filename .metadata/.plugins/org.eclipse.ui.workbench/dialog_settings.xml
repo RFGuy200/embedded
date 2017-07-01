@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="EditorSelectionDialog">
+		<item value="true" key="EditorSelectionDialog.STORE_ID_INTERNAL_EXTERNAL"/>
+		<item value=".h" key="EditorSelectionDialog.STORE_ID_FILE_EXTENSION"/>
+		<item value="C:\Program Files (x86)\Sublime Text 3\sublime_text.exe" key="EditorSelectionDialog.STORE_ID_DESCR"/>
+	</section>
+	<section name="org.eclipse.ui.internal.QuickAccess">
+		<item value="-1" key="dialogHeight"/>
+		<item value="-1" key="dialogWidth"/>
+		<list key="textEntries">
+		</list>
+		<list key="orderedElements">
+		</list>
+		<list key="orderedProviders">
+		</list>
+		<list key="textArray">
+		</list>
+	</section>
+	<section name="MemoryDumperFillAction">
+		<item value="LM_ICDI" key="com.ti.ccstudio.system.setup.ui.editors.connectionType"/>
+		<item value="Stellaris In-Circuit Debug Interface" key="com.ti.ccstudio.system.setup.ui.editors.connectionName"/>
+	</section>
+	<section name="ImportExportAction">
+		<item value="com.ti.ccstudio.project.ui.wizards.importexport.ImportMacrosWizard" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="com.ti.common.ui.import"/>
+		</list>
+	</section>
+</section>

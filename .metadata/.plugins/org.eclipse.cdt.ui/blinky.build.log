@@ -1,0 +1,17 @@
+
+**** Build of configuration Debug for project blinky ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k all 
+'Building file: ../6428.qs_iot.c'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --abi=eabi -me -O2 --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include" --include_path="C:/ti/TivaWare_C_Series-2.1.3.156" --advice:power=all -g --gcc --define=ccs="ccs" --define=PART_TM4C1294NCPDT --define=TARGET_IS_TM4C129_RA1 --diag_wrap=off --diag_warning=225 --display_error_number --gen_func_subsections=on --ual --preproc_with_compile --preproc_dependency="6428.qs_iot.d"  "../6428.qs_iot.c"
+
+>> Compilation failure
+subdir_rules.mk:9: recipe for target '6428.qs_iot.obj' failed
+"C:/ti/TivaWare_C_Series-2.1.3.156/utils/lwiplib.h", line 44: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "../6428.qs_iot.c".
+Compilation terminated.
+gmake: *** [6428.qs_iot.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****

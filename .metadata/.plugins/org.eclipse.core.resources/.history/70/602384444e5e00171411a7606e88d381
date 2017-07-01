@@ -1,0 +1,25 @@
+/*Lab 03 exercise. Initialize and configure*/
+
+#include <stdint.h>
+#include <stdbool.h>
+#include "inc/hw_memmap.h"
+#include "inc/hw_types.h"
+#include "driverlib/sysctl.h"
+#include "driverlib/gpio.h"
+
+
+void main(int argc, char const *argv[])
+{
+
+	uint8_t ui8PinData = 1;
+	SysCtlClockFreqSet((SYSCTL_XTAL_25MHZ | SYSCTL_OSC_MAIN | SYSCTL_USE_PLL | SYSCTL_CFG_VCO_480), 120000000);
+	SysCtlPeripheralEnable(SYSCTL_PERIPH_GPION);
+	GPIOPinWrite(GPIO_PORTN_BASE, GPIO_PIN_0 | GPIO_PIN_1, 0x00);
+
+	while(1){
+		GPIOPinWrite(GPIO_PORTN_BASE, GPIO_PIN_0 | GPIO_PIN_1, 0x01);
+		SysCtlDelay(2000000);
+		GPIOPinWrite(GPIO_PORTN_BASE, GPIO_PIN_0 | GPIO_PIN_1, 0x02);
+	}
+	
+}

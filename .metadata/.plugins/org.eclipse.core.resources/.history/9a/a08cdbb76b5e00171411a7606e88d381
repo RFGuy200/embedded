@@ -1,0 +1,45 @@
+/*Lab 03 exercise. Initialize and configure*/
+
+#include <stdint.h>
+#include <stdbool.h>
+#include "inc/hw_memmap.h"
+#include "inc/hw_types.h"
+#include "driverlib/sysctl.h"
+#include "driverlib/gpio.h"
+#include "buttons.h"
+
+
+void Initialize_HW()
+{
+    SysCtlClockFreqSet((SYSCTL_XTAL_25MHZ | SYSCTL_OSC_MAIN | SYSCTL_USE_PLL | SYSCTL_CFG_VCO_480), 120000000);
+	SysCtlPeripheralEnable(SYSCTL_PERIPH_GPION);
+	GPIOPinTypeGPIOOutput(GPIO_PORTN_BASE, GPIO_PIN_0|GPIO_PIN_1);
+	// ButtonsInit();	
+}
+
+void Blink_LEDs()
+{
+	/*LED state register*/
+	uint8_t ui8PinData = 1;
+
+	/*Initial LED State*/
+	GPIOPinWrite(GPIO_PORTN_BASE, GPIO_PIN_0 | GPIO_PIN_1, 0x00);
+
+	while(1){
+		GPIOPinWrite(GPIO_PORTN_BASE, GPIO_PIN_0 | GPIO_PIN_1, ui8PinData);
+		SysCtlDelay(2000000);
+		GPIOPinWrite(GPIO_PORTN_BASE, GPIO_PIN_0 | GPIO_PIN_1, ui8PinData + 1);
+		SysCtlDelay(2000000);
+	}
+}
+
+int main(int argc, char **argv)
+{
+	/*Initialize HW*/
+	Initialize_HW();
+
+	/*Blink LEDs forever*/
+	Blink_LEDs();
+
+	return 0;
+}
